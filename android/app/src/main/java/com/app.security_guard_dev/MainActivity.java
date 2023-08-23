@@ -1,4 +1,4 @@
-package com.rn_security_guard;
+package com.app.security_guard_dev;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
@@ -13,7 +13,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "RN_security_guard";
+    return "app.security_guard_dev";
   }
 
   /**

@@ -1,4 +1,4 @@
-package com.rn_security_guard;
+package com.app.security_guard_dev;
 
 import android.app.Application;
 import com.facebook.react.PackageList;
