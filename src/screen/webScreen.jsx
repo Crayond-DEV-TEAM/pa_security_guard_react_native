@@ -36,7 +36,7 @@ const WebScreen = (props) => {
             return <WebView
                 injectedJavaScript={INJECTED_JAVASCRIPT}
                 onMessage={onMessage}
-                source={{ uri: `https://dev-security-guard-v2.propertyautomate.com/` }} style={{ marginTop: 20 }} />
+                source={{ uri: `https://security.pms2.propgoto.com/login` }} style={{ marginTop: 20 }} />
     }
 
     return (

@@ -73,9 +73,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.app.security_guard_dev"
+    namespace "com.app.security_guard"
     defaultConfig {
-        applicationId "com.app.security_guard_dev"
+        applicationId "com.app.security_guard"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
