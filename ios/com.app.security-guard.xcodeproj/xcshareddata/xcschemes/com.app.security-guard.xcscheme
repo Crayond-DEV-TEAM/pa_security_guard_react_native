@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "app.security_guard.app"
-               BlueprintName = "app.security_guard"
-               ReferencedContainer = "container:app.security_guard.xcodeproj">
+               BuildableName = "com.app.security-guard.app"
+               BlueprintName = "com.app.security-guard"
+               ReferencedContainer = "container:com.app.security-guard.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "app.security_guardTests.xctest"
-               BlueprintName = "app.security_guardTests"
-               ReferencedContainer = "container:app.security_guard.xcodeproj">
+               BuildableName = "com.app.security-guardTests.xctest"
+               BlueprintName = "com.app.security-guardTests"
+               ReferencedContainer = "container:com.app.security-guard.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "app.security_guard.app"
-            BlueprintName = "app.security_guard"
-            ReferencedContainer = "container:app.security_guard.xcodeproj">
+            BuildableName = "com.app.security-guard.app"
+            BlueprintName = "com.app.security-guard"
+            ReferencedContainer = "container:com.app.security-guard.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "app.security_guard.app"
-            BlueprintName = "app.security_guard"
-            ReferencedContainer = "container:app.security_guard.xcodeproj">
+            BuildableName = "com.app.security-guard.app"
+            BlueprintName = "com.app.security-guard"
+            ReferencedContainer = "container:com.app.security-guard.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
