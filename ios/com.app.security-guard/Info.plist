@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationUsageDescription</key>
-	<string>YOUR TEXT</string>
+	<string>We need your location to provide location-based services in Guard. - To fetch the location where the pass is scanned by security guard</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>YOUR TEXT</string>
+	<string>When a scan of pass is made the location is fetched to see the property location</string>
 	<key>NSCameraUsageDescription</key>
-    <string>YOUR TEXT</string>
+    <string>For taking pictures of visitors and vehicles entering the premises</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-    <string>YOUR TEXT</string>
+    <string>Will be only used when a scan happens during a visitor or vehicle enters the premises</string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
@@ -23,6 +23,8 @@
 			</array>
 		</dict>
 	</array>
+	<key>LSRequiresIPhoneOS</key><true/>
+	<key>LSSupportsOpeningDocumentsInPlace</key> <true/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
