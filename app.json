@@ -1,4 +1,5 @@
 {
-  "name": "com.app.security-guard",
+  "commit":"if ios com.app.security-guard else if android app.security_guard",
+  "name": "app.security_guard",
   "displayName": "Security Guard"
 }

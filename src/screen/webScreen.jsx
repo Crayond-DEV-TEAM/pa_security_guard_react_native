@@ -29,7 +29,7 @@ const WebScreen = (props) => {
 
     // console.log(`https://dev-resident-v3.propertyautomate.com/login/?deviceToken=${diviceToken}`+ ' diviceToken');
     const onMessage = (payload) => {
-        console.log('payload asses', payload);
+        // console.log('payload asses', payload);
     };
 
     const WebviewRender = () => {

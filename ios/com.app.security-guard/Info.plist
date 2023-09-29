@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIBackgroundModes</key>
+	<array>
+	<string>push notification for users</string>
+	</array>
 	<key>NSLocationUsageDescription</key>
 	<string>We need your location to provide location-based services in Guard. - To fetch the location where the pass is scanned by security guard</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
