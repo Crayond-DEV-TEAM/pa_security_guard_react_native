@@ -23,8 +23,7 @@ const App = () => {
   const [token, setToken] = useState("");
 
   useEffect(() => {
-    setupNotifications();
-    setupFCM();
+    // setupNotifications();
   }, []);
 
   React.useEffect(() => {
@@ -38,8 +37,10 @@ const App = () => {
     // Check if the app has been granted notification permissions    
     
     const settings = await notifee.getNotificationSettings();
-    await notifee.requestPermission();
-    // await messaging().registerDeviceForRemoteMessages();
+    // await notifee.requestPermission();
+    await messaging().registerDeviceForRemoteMessages();
+    setupFCM();
+    
 
     if (settings.authorizationStatus === AuthorizationStatus.NOT_DETERMINED) {
       // Ask for notification permission if it's not determined yet
