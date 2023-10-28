@@ -55,16 +55,11 @@
 	<key>NSLocationUsageDescription</key>
 	<string>We need your location to provide location-based services in Guard. - To fetch the location where the pass is scanned by security guard</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string>We need your location to provide location-based services in Guard. - To fetch the location where the pass is scanned by security guard</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Will be only used when a scan happens during a visitor or vehicle enters the premises</string>
 	<key>UIBackgroundModes</key>
-	<array>
-		<string>location</string>
-		<string>processing</string>
-		<string>push notification for users</string>
-		<string>remote-notification</string>
-	</array>
+	<array/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
