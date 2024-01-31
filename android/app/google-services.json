@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1085668111692",
+    "project_id": "propertyautomate",
+    "storage_bucket": "propertyautomate.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1085668111692:android:ad77a9c41bf5d5fcff0be9",
+        "android_client_info": {
+          "package_name": "com.rn_security_guard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1085668111692-rlriqg8799bpp391dslp02g98jbrsfvu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOD3o0QKMxFRJlvJ7cbL8ZwBndtrGxiaY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1085668111692-rlriqg8799bpp391dslp02g98jbrsfvu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1085668111692-en97v0d8t0gla2ml84vjj966ttkrju8f.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.rn_security_guard"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
