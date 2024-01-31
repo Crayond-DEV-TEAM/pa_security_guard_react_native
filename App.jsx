@@ -20,10 +20,16 @@ import SplashScreen from 'react-native-splash-screen';
 import WebScreen from "./src/screen/webScreen";
 const App = () => {
 
+  let url="https://dev-security-guard-v2.propertyautomate.com/login";
   const [token, setToken] = useState("");
+  const [webUrl, setWebUrl] = React.useState(url);
 
   useEffect(() => {
-    // setupNotifications();
+    setWebUrl(url);
+  }, [token]);
+
+  useEffect(() => {
+    setupNotifications();
   }, []);
 
   React.useEffect(() => {
@@ -32,6 +38,8 @@ const App = () => {
       SplashScreen.hide();
     }
   }, []);
+
+  
   
   const setupNotifications = async () => {
     // Check if the app has been granted notification permissions    
@@ -77,20 +85,49 @@ const App = () => {
     });
 
 
-    // For handling notification press events in the foreground
-    notifee.onForegroundEvent(async ({ type, detail }) => {
-      console.log('Notification Press in Foreground:', detail);
-    });
-
-    // For handling notification press events in the background
-    notifee.onBackgroundEvent(({ type, detail }) => {
-      console.log('Notification Press in background:', detail);
-    });
+      // For handling notification press events in the foreground
+      notifee.onForegroundEvent(async ({type, detail}) => {
+        let url = '';
+        if (detail?.pressAction?.id === 'rejected') {
+          url = `${detail?.notification?.data?.redirect_url}&status=rejected`;
+        } else if (detail?.pressAction?.id === 'accept') {
+          url = `${detail?.notification?.data?.redirect_url}&status=accept`;
+        } else if (type === 1 && !detail?.pressAction?.id) {
+          url = `${detail?.notification?.data?.redirect_url}`;
+        }
+        console.log(url, 'url');
+  
+        if (url?.length > 0) {
+          setWebUrl(url);
+        }
+  
+        console.log('Notification Press in Foreground:', type);
+      });
+  
+      // For handling notification press events in the background
+      notifee.onBackgroundEvent(async ({type, detail}) => {
+  
+  
+        let url = '';
+        if (detail?.pressAction?.id === 'rejected') {
+          url = `${detail?.notification?.data?.redirect_url}&status='rejected`;
+        } else if (detail?.pressAction?.id === 'accept') {
+          url = `${detail?.notification?.data?.redirect_url}&status='accept`;
+        } else if (type === 1 && !detail?.pressAction?.id) {
+          url = `${detail?.notification?.data?.redirect_url}`;
+        }
+  
+        if (url?.length > 0) {
+          setWebUrl(url);
+        }
+  
+        console.log('Notification Press in background:', type);
+      });
 
   };
 
   return (
-    <WebScreen />
+    <WebScreen webUrl={webUrl}/>
   );
 };
 

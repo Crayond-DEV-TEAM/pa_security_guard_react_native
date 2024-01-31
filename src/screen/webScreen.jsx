@@ -32,7 +32,7 @@ const isIOS = Platform.OS === 'ios';
 const { height } = Dimensions.get('window');
 
 const WebScreen = (props) => {
-    const { diviceToken } = props;
+    const { diviceToken,webUrl } = props;
 
     // console.log(`https://dev-resident-v3.propertyautomate.com/login/?deviceToken=${diviceToken}`+ ' diviceToken');
     const onMessage = (payload) => {
@@ -47,7 +47,7 @@ const WebScreen = (props) => {
                 cacheEnabled={false}
                 cacheMode={'LOAD_NO_CACHE'}
                 style={{ marginTop: isIOS ? 0 : 10 }}
-                source={{ uri: `https://security.pms2.propgoto.com/login` }}
+                source={{ uri: webUrl }}
                 />
     }
 
