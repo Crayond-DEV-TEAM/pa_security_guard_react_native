@@ -42,21 +42,16 @@ const App = () => {
   }, []);
 
   const permission = async () => {
-    requestCameraPermission()
-      .then(async res => {
-        if (res) {
-          console.log('You can use the camera');
-          const hasMicrophoneAccess = await requestMicrophonePermission();
-          if (hasMicrophoneAccess) {
-            console.log('You can use the microphone');
-          } else {
-            console.log('Microphone permission denied');
-          }
-        }
-      })
-      .catch(err => {
-        console.log('Camera permission denied');
-      });
+    const hasCameraAccess = await requestCameraPermission();
+    if(hasCameraAccess){
+      console.log('You can use the camera');
+      const hasMicrophoneAccess = await requestMicrophonePermission();
+      if (hasMicrophoneAccess) {
+        console.log('You can use the microphone');
+      } else {
+        console.log('Microphone permission denied');
+      }
+    }
   };
 
   React.useEffect(() => {
