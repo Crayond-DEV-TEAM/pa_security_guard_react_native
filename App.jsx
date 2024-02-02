@@ -16,21 +16,67 @@ import { firebase } from '@react-native-firebase/app';
 
 import { Platform } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
+import {
+  PermissionsAndroid
+} from 'react-native';
 
 import WebScreen from "./src/screen/webScreen";
 const App = () => {
 
-  let url="https://dev-security-guard-v2.propertyautomate.com/login";
   const [token, setToken] = useState("");
-  const [webUrl, setWebUrl] = React.useState(url);
+  const [webUrl, setWebUrl] = React.useState("https://dev-security-guard-v2.propertyautomate.com/login");
 
   useEffect(() => {
-    setWebUrl(url);
+    if(token){
+    setWebUrl(`https://dev-security-guard-v2.propertyautomate.com/login?deviceToken=${token}`);
+    }
   }, [token]);
 
   useEffect(() => {
     setupNotifications();
+    permission()
   }, []);
+
+  const permission=async()=>{
+
+    const grantedMic = await PermissionsAndroid.request(
+      PermissionsAndroid.PERMISSIONS.RECORD_AUDIO,
+      {
+        title: "Audio Permission",
+        message: "App needs access to your audio/microphone",
+        neutralButtonLabel: "Ask Me Later",
+        negativeButtonLabel: "Cancel",
+        positiveButtonLabel: "OK"
+      }
+    );
+  
+    if (grantedMic === PermissionsAndroid.RESULTS.GRANTED) {
+      console.log("You can use the Microphone");
+    } else {
+      console.log("Microphone permission denied");
+    } 
+    
+    
+    let granted = await PermissionsAndroid.request(
+      PermissionsAndroid.PERMISSIONS.CAMERA,
+      {
+        title: "Camera Permission",
+        message:
+          "App needs access to your camera " +
+          "so others can see you.",
+        buttonNeutral: "Ask Me Later",
+        buttonNegative: "Cancel",
+        buttonPositive: "OK"
+      }
+    );
+    if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+      console.log("You can use the camera");
+    } else {
+      console.log("Camera permission denied");
+    }
+  
+ 
+  }
 
   React.useEffect(() => {
     if (Platform.OS === 'android') {
