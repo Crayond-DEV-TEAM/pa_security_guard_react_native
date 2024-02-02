@@ -58,6 +58,8 @@
 	<string>We need your location to provide location-based services in Guard. - To fetch the location where the pass is scanned by security guard</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Will be only used when a scan happens during a visitor or vehicle enters the premises</string>
+	<key>NSMicrophoneUsageDescription</key>
+  	<string>Allow Security Guard to access your microphone</string>
 	<key>UIBackgroundModes</key>
 	<array/>
 	<key>UILaunchStoryboardName</key>
